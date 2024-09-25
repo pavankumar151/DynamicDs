@@ -1,14 +1,14 @@
 class DynamicArray:
-    def _init_(self, initial_capacity=2, increment=10):
+    def __init__(self, initial_capacity=2, increment=10):
         self.data = [None] * initial_capacity
         self.capacity = initial_capacity
         self.size = 0
         self.increment = increment
 
-    def _len_(self):
+    def __len__(self):
         return self.size
 
-    def _str_(self):
+    def __str__(self):
         return str([self.data[i] for i in range(self.size)])
 
     def resize(self):
@@ -47,5 +47,5 @@ def main():
     print(f"Final array size: {len(words_array)}")
     print("First 10 words:", words_array.data[:10])
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
